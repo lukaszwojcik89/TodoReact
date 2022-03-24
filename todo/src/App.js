@@ -1,7 +1,7 @@
 import './App.css';
 import {useEffect, useState} from "react";
 
-import {loadFromLocalStorage, saveToLocalStorage} from "./utils/localStorage";
+import {loadFromLocalStorage, saveToLocalStorage} from "./utils/localstorage";
 import uuidGen from "./utils/uuid";
 
 import Headline from "./components/Headline";
