@@ -1,14 +1,14 @@
-function TaskItem({ id, status, name, handleChangeStatus, handleDeleteTask }) {
+function TaskItem({id, status, name, handleChangeStatus, handleDeleteTask}) {
     return (
-        <li className="todo-item">
+        <li className='todo-item'>
             <span
-                className={status ? "status done" : "status active"}
+                className={status ? 'status done' : 'status active'}
                 onClick={() => handleChangeStatus(id)}
             />
-            {name}
-            <button onClick={() => handleDeleteTask(id)}> X </button>{" "}
+            <span>{name}</span>
+            <button onClick={() => handleDeleteTask(id)}>x</button>
         </li>
-    )
+    );
 }
 
-export default TaskItem
+export default TaskItem;
