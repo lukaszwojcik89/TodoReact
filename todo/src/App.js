@@ -58,7 +58,7 @@ function App() {
 
     async function handleChangeStatus(id) {
 
-        const newTasks = tasks.filter(task => task.id === id)[0];
+        const newTasks = tasks.filter(task => task.id === id)[0];   
         newTasks.status = !newTasks.status;
 
         await updateDoc(doc(db, "todos", newTasks.id), { status: newTasks.status });
@@ -67,11 +67,11 @@ function App() {
     }
 
     async function handleDeleteTask(id) {
-        await deleteDoc(doc(db, "todos", id));
+        await deleteDoc(doc(db, "todos", id));  // delete from firebase
         setTasks(tasks.filter(task => task.id !== id))
     }
 
-    async function handleDeleteDone() {
+    async function handleDeleteDone() { 
         const batch = writeBatch(db); // create a batch
         tasks.forEach(task => { // loop through all tasks
             if(task.status) {   // if task is done
