@@ -1,0 +1,90 @@
+@import "utils";
+
+.hdl {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: toRem(100);
+  color: rgba(175, 47, 47, 0.15);
+  font-weight: 100;
+  text-align: center;
+  margin: toRem(11);
+}
+
+.container {
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 25px 50px 0 rgb(0 0 0 / 10%);
+  width: 100%;
+  max-width: toRem(550);
+  margin: auto;
+  background-color: white;
+}
+
+.input {
+  font-size: toRem(24);
+  padding: toRem(16) toRem(16) toRem(16) toRem(60);
+  border: 0;
+  box-shadow: inset 0 -2px 1px rgb(0 0 0 / 3%);
+  background-color: rgba(0, 0, 0, 0.004);
+  outline: 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-weight: 300;
+  color: rgb(77, 77, 77);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  &::placeholder{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: italic;
+    color: #e6e6e6;
+    font-weight: 300;
+  }
+}
+
+
+.status {
+  display: inline-block;
+  height: toRem(29);
+  width: toRem(29);
+  border-radius: 50%;
+  border: toRem(1) solid #ededed;
+  margin-right: toRem(20);
+  cursor: pointer;
+
+}
+
+.active {
+  background: red;
+}
+
+.done {
+  background: white;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+  padding-left: 0;
+  margin: 0;
+}
+
+.todo-item{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 300;
+  color: rgb(77, 77, 77);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: toRem(24);
+  padding: toRem(15) toRem(45) toRem(15) toRem(15);
+  border-bottom: toRem(1) solid #e6e6e6;
+  position: relative;
+  button{
+    opacity: 0;
+    transition: opacity 400ms;
+    position: absolute;
+    right: toRem(15);
+  }
+}
+
+.todo-item:hover button {
+  opacity: 1;
+}
