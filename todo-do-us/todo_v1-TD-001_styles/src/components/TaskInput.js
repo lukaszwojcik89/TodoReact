@@ -1,6 +1,6 @@
-import { addDoc, collection } from "firebase/firestore";
-import { db } from "../firebase";
-import { useState } from "react";
+import {addDoc, collection} from "firebase/firestore";
+import {db} from "../firebase";
+import {useState} from "react";
 
 function TaskInput() {
     const [value, setValue] = useState('');
@@ -23,11 +23,11 @@ function TaskInput() {
 
     return (
         <input type="text"
-            value={value}
-            onChange={handleChange}
-            onKeyUp={handleKeyUp}
-            className='input'
-            placeholder='What needs to be done?'
+               value={value}
+               onChange={handleChange}
+               onKeyUp={handleKeyUp}
+               className='input'
+               placeholder='What needs to be done?'
         />
     );
 }

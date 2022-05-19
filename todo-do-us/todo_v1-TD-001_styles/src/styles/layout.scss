@@ -1,0 +1,7 @@
+@import "variables";
+@import "utils.scss";
+
+html, body {
+  background-color: $bg-color;
+  font-size: toRem($base-font-size);
+}
